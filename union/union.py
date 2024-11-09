@@ -2,35 +2,22 @@ import streamlit as st
 import psycopg2 as pg
 import urllib.parse as urlparse
 
-# Aiven PostgreSQL connection URL (replace with your actual URL from the Aiven Console)
-DATABASE_URL = "postgres://avnadmin:AVNS_Wlr66NJhJl_VBS7Xzz9@my-postgres-db-union-form.j.aivencloud.com:24887/defaultdb?sslmode=require"  # Replace with your actual URL
 
-# Parse the database URL into components
+DATABASE_URL = "postgres://avnadmin:AVNS_Wlr66NJhJl_VBS7Xzz9@my-postgres-db-union-form.j.aivencloud.com:24887/defaultdb?sslmode=require"  
+
 url = urlparse.urlparse(DATABASE_URL)
-
-# Establish the connection
 try:
     con = pg.connect(
         host=url.hostname,
-        port=url.port,  # Usually, PostgreSQL runs on port 5432
-        database=url.path[1:],  # Database name (after "/")
+        port=url.port,  
+        database=url.path[1:],  
         user=url.username,
         password=url.password
     )
-    st.success("Connected to PostgreSQL on Aiven!")
+
 except Exception as e:
     st.error(f"Error connecting to PostgreSQL: {e}")
 st.columns(3)[1].title("Welcome")
-page_bg=f"""<style>
-[data-testid="stAppViewContainer"]{{
-background-image:url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDQ0PDw8PDw8NDQ0NDQ0PEA8PDw0NFREWFhURFRMYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0NFQ8PFS0dFR0rKy0tKy0tKystKystKysrKy0rKzctKysrLTcrKysrLS0rKy0uKy0rLSsrKysrLSs3K//AABEIAKsBJgMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAQIDB//EACQQAQEAAgECBgMBAAAAAAAAAAABAhGBMfASIUFRYZGhscED/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAGhEBAQEAAwEAAAAAAAAAAAAAABEBAjFREv/aAAwDAQACEQMRAD8A9w8xF4EA4/QKgvfkgi7VkBoSVRQAAAAAAAAAAAAAAAAAAAAAAAAAAAEAoAHAAAIKggsqANDKyiqAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAcAAAgoIiKAsqsNSgoAoAAAAAAAAAAAAAAAAAAAAACAAAAHIAcgAAAgoIiKAStMEqjYkqooAAAAAAAAAAAAAAAAAAACAAAAAAcgAcgAACIKAiKig1KyA2JKqKAAAAAAAAAAAAAAAAAAgAgAKAaAF0AgoCcigIGgBF0giCooLMkBGxmVpGgAAAAAAAAAAAAAAZyyk6gm8sxdKAoAAAAAAAAAAAAACaTTQDA2zcRIhKllTas11gxK1KjWaoAoAAAAAACbBUtTaaErOXn/AAaFZ+WwEbAAAAAAAAAAAAAAAAAAEslUBzuF9LxWfFw7JZtazvHxmZtbc7/n7fVMc/SiWdumxBGlNnfQFNgCIKAgoCBoBoAUAAAAAAAAAAAAAAAAAAAAAATLGXqoDl4bPmflqZbbZyw38X3VmToVjdnX79GkXNXvoIoAAoACCgigCgAAAAAAAAAAAAAAAAAAAAAAAAADFx10+mwSMSqtjOrAa79RJQFAAAFUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEuKNAkZUsQFE2A//Z");
-opacity:1.5;
-}}
-[data-testid="stHeader"]
-{{background-color:rgba(0,0,0,0);}}
-</style>"""
-st.markdown(page_bg,unsafe_allow_html=True)
-
 def info():
         name = st.text_input("Name :",placeholder="Enter your name")
 
