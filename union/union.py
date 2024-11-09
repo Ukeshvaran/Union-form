@@ -21,8 +21,6 @@ try:
 except Exception as e:
     st.error(f"Error connecting to PostgreSQL: {e}")
 st.columns(3)[1].title("Welcome")
-con = pg.connect(host='localhost', port='5432', database='jack', user='postgres', password='137700')
-cur = con.cursor()
 page_bg=f"""<style>
 [data-testid="stAppViewContainer"]{{
 background-image:url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDQ0PDw8PDw8NDQ0NDQ0PEA8PDw0NFREWFhURFRMYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0NFQ8PFS0dFR0rKy0tKy0tKystKystKysrKy0rKzctKysrLTcrKysrLS0rKy0uKy0rLSsrKysrLSs3K//AABEIAKsBJgMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAQIDB//EACQQAQEAAgECBgMBAAAAAAAAAAABAhGBMfASIUFRYZGhscED/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAGhEBAQEAAwEAAAAAAAAAAAAAABEBAjFREv/aAAwDAQACEQMRAD8A9w8xF4EA4/QKgvfkgi7VkBoSVRQAAAAAAAAAAAAAAAAAAAAAAAAAAAEAoAHAAAIKggsqANDKyiqAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAcAAAgoIiKAsqsNSgoAoAAAAAAAAAAAAAAAAAAAAACAAAAHIAcgAAAgoIiKAStMEqjYkqooAAAAAAAAAAAAAAAAAAACAAAAAAcgAcgAACIKAiKig1KyA2JKqKAAAAAAAAAAAAAAAAAAgAgAKAaAF0AgoCcigIGgBF0giCooLMkBGxmVpGgAAAAAAAAAAAAAAZyyk6gm8sxdKAoAAAAAAAAAAAAACaTTQDA2zcRIhKllTas11gxK1KjWaoAoAAAAAACbBUtTaaErOXn/AAaFZ+WwEbAAAAAAAAAAAAAAAAAAEslUBzuF9LxWfFw7JZtazvHxmZtbc7/n7fVMc/SiWdumxBGlNnfQFNgCIKAgoCBoBoAUAAAAAAAAAAAAAAAAAAAAAATLGXqoDl4bPmflqZbbZyw38X3VmToVjdnX79GkXNXvoIoAAoACCgigCgAAAAAAAAAAAAAAAAAAAAAAAAADFx10+mwSMSqtjOrAa79RJQFAAAFUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEuKNAkZUsQFE2A//Z");
@@ -77,6 +75,7 @@ def info():
                  st.balloons()
         st.markdown(":copyright: Jack's Personal deployment")
 def sqlupdate(a, b, c, d , e,f,g,h):
+    cur = con.cursor()
     cur.execute("""CREATE TABLE IF NOT EXISTS "unitable" (
                         name VARCHAR(60),
                         phone VARCHAR(15),
