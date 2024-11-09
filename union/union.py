@@ -2,6 +2,22 @@ import streamlit as st
 import psycopg2 as pg
 import urllib.parse as urlparse
 
+st.markdown(
+    """
+    <style>
+        /* Hide the Streamlit GitHub icon and top bar */
+        .css-1d391kg {display: none;}  /* GitHub icon */
+        
+        /* Hide the "Streamlit" label in the top bar */
+        header {visibility: hidden;}  /* Hide Streamlit branding on the header */
+        
+        /* Optionally, remove the footer */
+        footer {visibility: hidden;}  /* Hide the footer (Streamlit's footer text) */
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 DATABASE_URL = "postgres://avnadmin:AVNS_Wlr66NJhJl_VBS7Xzz9@my-postgres-db-union-form.j.aivencloud.com:24887/defaultdb?sslmode=require"  
 
