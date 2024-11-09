@@ -1,5 +1,25 @@
 import streamlit as st
 import psycopg2 as pg
+import urllib.parse as urlparse
+
+# Aiven PostgreSQL connection URL (replace with your actual URL from the Aiven Console)
+DATABASE_URL = "postgres://avnadmin:AVNS_Wlr66NJhJl_VBS7Xzz9@my-postgres-db-union-form.j.aivencloud.com:24887/defaultdb?sslmode=require"  # Replace with your actual URL
+
+# Parse the database URL into components
+url = urlparse.urlparse(DATABASE_URL)
+
+# Establish the connection
+try:
+    con = pg.connect(
+        host=url.hostname,
+        port=url.port,  # Usually, PostgreSQL runs on port 5432
+        database=url.path[1:],  # Database name (after "/")
+        user=url.username,
+        password=url.password
+    )
+    st.success("Connected to PostgreSQL on Aiven!")
+except Exception as e:
+    st.error(f"Error connecting to PostgreSQL: {e}")
 st.columns(3)[1].title("Welcome")
 con = pg.connect(host='localhost', port='5432', database='jack', user='postgres', password='137700')
 cur = con.cursor()
