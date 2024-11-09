@@ -1,7 +1,7 @@
 import streamlit as st
 import psycopg2 as pg
 st.columns(3)[1].title("Welcome")
-con = pg.connect(host='localhost', port='5432', database='jack', user='postgres', password='137700')
+con = pg.connect(host='127.0.0.1', port='5432', database='jack', user='postgres', password='137700')
 cur = con.cursor()
 page_bg=f"""<style>
 [data-testid="stAppViewContainer"]{{
