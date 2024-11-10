@@ -78,7 +78,7 @@ try:
                  if submit:
                      st.success("Thanks for your response!", icon=":material/thumb_up:")
                      sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
-                     st.snow()
+                     st.balloon()
             st.markdown(":copyright: :blue[yukesh] personal deployment")
     
     def sqlupdate(a, b, c, d , e,f,g,h,i):
