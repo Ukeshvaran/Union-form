@@ -77,6 +77,7 @@ try:
                  submit = st.columns(4)[2].button("Submit",type='primary')
                  if submit:
                      st.success("Thanks for your response!", icon=":material/thumb_up:")
+                     st.warning("You can now close your browser")
                      sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
                      st.balloons()
             st.markdown(":copyright: :blue[yukesh] personal deployment")
