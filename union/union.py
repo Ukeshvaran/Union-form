@@ -71,7 +71,7 @@ try:
                       conn.write("if your going to perform any group activity. Kindly coordinate with your team and update here, what your going to perform along with your team-mates name")
                  performance=st.text_input("Please enter what you are going to perform :",placeholder="Enter your input in a single line")
             st.divider()
-            check_box=st.checkbox(":red[click] ")
+            check_box=st.checkbox(":blue[click] ")
             if check_box:
                  with st.chat_message('ai'):
                     container = st.container(border=True)
@@ -89,7 +89,7 @@ try:
                      
                      sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
                      st.balloons()
-            st.markdown(":copyright: :blue[yukesh] personal deployment")
+            st.markdown(":copyright: :red[yukesh] personal deployment")
     
     def sqlupdate(a, b, c, d , e,f,g,h,i):
         cur = con.cursor()
