@@ -31,7 +31,7 @@ try:
 
 except Exception as e:
     st.error(f"Error connecting to Database: {e}")
-st.columns(3)[1].title(":red[Welcome] :sunflower:")
+st.columns(3)[1].title(":red[Welcome] :cherry_blossom:")
 def info():
         name = st.text_input("Name :",placeholder="Enter your name")
 
