@@ -68,7 +68,7 @@ try:
                       conn=st.container(border=True)
                       conn.write("if your going to perform any group activity. Kindly coordinate with your team and update here, what your going to perform along with your team-mates name")
                  performance=st.text_input("Please enter what you are going to perform :",placeholder="Enter your input in a single line")
-            st.image("https://i.pinimg.com/originals/eb/7d/ac/eb7dac979075bb72d3d0437a8d7df108.jpg",width=250)
+            st.image("https://i.pinimg.com/736x/cf/f6/09/cff60975f94352f8ac8049b2f792052c.jpg",width=200)
             check_box=st.checkbox("click & submit")
             if check_box:
                  with st.chat_message('ai'):
