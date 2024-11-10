@@ -34,7 +34,7 @@ except Exception as e:
     st.error(f"Error connecting to Database: {e}")
 try:
     st.columns(3)[1].title(":red[Welcome] :balloon:")
-    st.image("https://www.pngall.com/wp-content/uploads/13/Friends-Logo-PNG-Photo.png",width=250)
+    st.image("https://i.pinimg.com/originals/53/96/0a/53960a394fd3c5c5e203d7d0bd5cbb0a.png",width=250)
     st.divider()
     def info():
             name = st.text_input("Name :",placeholder="Enter your name")
