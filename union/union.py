@@ -22,7 +22,6 @@ st.markdown(
 DATABASE_URL = "postgres://avnadmin:AVNS_Wlr66NJhJl_VBS7Xzz9@my-postgres-db-union-form.j.aivencloud.com:24887/defaultdb?sslmode=require"  
 
 url = urlparse.urlparse(DATABASE_URL)
-try:
     con = pg.connect(
         host=url.hostname,
         port=url.port,  
@@ -34,6 +33,7 @@ try:
 except Exception as e:
     st.error(f"Error connecting to PostgreSQL: {e}")
 st.columns(3)[1].title("Welcome")
+try:
 def info():
         name = st.text_input("Name :",placeholder="Enter your name")
 
@@ -79,22 +79,26 @@ def info():
                  sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
                  st.balloons()
         st.markdown(":copyright: Jack's Personal deployment")
-def sqlupdate(a, b, c, d , e,f,g,h,i):
-    cur = con.cursor()
-    cur.execute("""CREATE TABLE IF NOT EXISTS "unitable" (
-                        name VARCHAR(60),
-                        phone VARCHAR(15),
-                        Theme VARCHAR(500),
-                        event_availability(10),
-                        availability VARCHAR(500),
-                        place VARCHAR(500),
-                        food VARCHAR(30),
-                        suggestion VARCHAR(500),
-                        Performance VARCHAR(500)
-                    )""")
-    cur.execute("""INSERT INTO "unitable" (name, phone , theme,event_availability,availability,place ,food, suggestion,performance)
-                    VALUES (%s, %s, %s, %s, %s,%s,%s,%s,%s)""", (a, b, c, d, e,f,g,h,i))
-    con.commit()
+
+try:
+    def sqlupdate(a, b, c, d , e,f,g,h,i):
+        cur = con.cursor()
+        cur.execute("""CREATE TABLE IF NOT EXISTS "unitable" (
+                            name VARCHAR(60),
+                            phone VARCHAR(15),
+                            Theme VARCHAR(500),
+                            event_availability(10),
+                            availability VARCHAR(500),
+                            place VARCHAR(500),
+                            food VARCHAR(30),
+                            suggestion VARCHAR(500),
+                            Performance VARCHAR(500)
+                        )""")
+        cur.execute("""INSERT INTO "unitable" (name, phone , theme,event_availability,availability,place ,food, suggestion,performance)
+                        VALUES (%s, %s, %s, %s, %s,%s,%s,%s,%s)""", (a, b, c, d, e,f,g,h,i))
+        con.commit()
+except:
+    st.warning("An error occurred")
 
 info()
 
