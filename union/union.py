@@ -71,7 +71,7 @@ try:
                       conn.write("if your going to perform any group activity. Kindly coordinate with your team and update here, what your going to perform along with your team-mates name")
                  performance=st.text_input("Please enter what you are going to perform :",placeholder="Enter your input in a single line")
             st.divider()
-            check_box=st.checkbox("click & submit")
+            check_box=st.checkbox(":blue[click] & submit")
             if check_box:
                  with st.chat_message('ai'):
                     container = st.container(border=True)
