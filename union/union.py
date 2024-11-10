@@ -91,7 +91,7 @@ def sqlupdate(a, b, c, d , e,f,g,h,i):
                         Performance VARCHAR(500)
                     )""")
     cur.execute("""INSERT INTO "unitable" (name, phone , theme,event_availability,availability,place ,food, suggestion,performance)
-                    VALUES (%s, %s, %s, %s, %s,%s,%s,%s,%s)""", (a, b, c, d, e,f,g,h,i)
+                    VALUES (%s, %s, %s, %s, %s,%s,%s,%s,%s)""", (a, b, c, d, e,f,g,h,i))
     con.commit()
 
     
