@@ -1,4 +1,5 @@
 streamlit
 psycopg2-binary
+from streamlit_lottie import st_lottie
 
 
