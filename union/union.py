@@ -33,7 +33,6 @@ url = urlparse.urlparse(DATABASE_URL)
 except Exception as e:
     st.error(f"Error connecting to PostgreSQL: {e}")
 st.columns(3)[1].title("Welcome")
-try:
 def info():
         name = st.text_input("Name :",placeholder="Enter your name")
 
