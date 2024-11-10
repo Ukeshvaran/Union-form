@@ -84,7 +84,7 @@ def sqlupdate(a, b, c, d , e,f,g,h,i):
                         name VARCHAR(60),
                         phone VARCHAR(15),
                         Theme VARCHAR(500),
-                        event_availability(10),
+                        event_availability VARCHAR(10),
                         availability VARCHAR(500),
                         place VARCHAR(500),
                         food VARCHAR(30),
