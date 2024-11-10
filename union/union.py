@@ -68,7 +68,7 @@ try:
                       conn=st.container(border=True)
                       conn.write("if your going to perform any group activity. Kindly coordinate with your team and update here, what your going to perform along with your team-mates name")
                  performance=st.text_input("Please enter what you are going to perform :",placeholder="Enter your input in a single line")
-            st.image("https://stickerdise.com/wp-content/uploads/2022/05/SINGLE42_kiss-cut-stickers-5.5x5.5-default-626e86e97eb7d.webp",width=250)
+            st.image("https://stickerdise.com/wp-content/uploads/2022/05/SINGLE42_kiss-cut-stickers-5.5x5.5-default-626e86e97eb7d.webp",width=260)
             check_box=st.checkbox("click & submit")
             if check_box:
                  with st.chat_message('ai'):
