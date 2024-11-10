@@ -1,7 +1,6 @@
 import streamlit as st
 import psycopg2 as pg
 import urllib.parse as urlparse
-import time
 
 st.markdown(
     """
@@ -77,8 +76,6 @@ try:
     
                  submit = st.columns(4)[2].button("Submit",type='primary')
                  if submit:
-                     with st.spinner(text="Loading....."):
-                         time.sleep(2)
                      st.success("Thanks for your response!", icon=":material/thumb_up:")
                      st.error("You can now close your browser")
                      
