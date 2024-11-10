@@ -89,7 +89,7 @@ try:
                      
                      sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
                      st.balloons()
-            st.markdown(":copyright: :red[yukesh] personal web deployment")
+            st.markdown(":copyright: :red[yukesh's] personal web deployment")
     
     def sqlupdate(a, b, c, d , e,f,g,h,i):
         cur = con.cursor()
