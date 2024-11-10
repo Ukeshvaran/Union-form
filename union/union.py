@@ -34,7 +34,7 @@ except Exception as e:
     st.error(f"Error connecting to Database: {e}")
 try:
     #st.columns(3)[1].title(":red[Welcome] :balloon:")
-    st.columns(5)[2].image("https://stickerdise.com/wp-content/uploads/2022/05/SINGLE42_kiss-cut-stickers-5.5x5.5-default-626e86e97eb7d.webp",width=180)
+    st.columns(5)[2].image("https://stickerdise.com/wp-content/uploads/2022/05/SINGLE42_kiss-cut-stickers-5.5x5.5-default-626e86e97eb7d.webp",width=250)
     def info():
             name = st.text_input("Name :",placeholder="Enter your name")
     
