@@ -21,12 +21,13 @@ st.markdown(
 
 DATABASE_URL = "postgres://avnadmin:AVNS_Wlr66NJhJl_VBS7Xzz9@my-postgres-db-union-form.j.aivencloud.com:24887/defaultdb?sslmode=require"  
 url = urlparse.urlparse(DATABASE_URL)
-con = pg.connect(
-    host=url.hostname,
-    port=url.port,  
-    database=url.path[1:],  
-    user=url.username,
-    password=url.password)
+try:
+    con = pg.connect(
+        host=url.hostname,
+        port=url.port,  
+        database=url.path[1:],  
+        user=url.username,
+        password=url.password)
 
 except Exception as e:
     st.error(f"Error connecting to PostgreSQL: {e}")
