@@ -42,7 +42,7 @@ try:
     
             event_avail= st.radio("Please confirm whether you will be available to join the event :",["Yes","No","Not sure"],horizontal=True)
     
-            availability = st.radio("Are you comfortable with the event date :", ["yes", "No"],horizontal=True)
+            availability = st.radio("Are you comfortable with the event date :", ["Yes", "No"],horizontal=True)
             if availability == "No":
                 availability = st.text_input("Kindly share us your availability :",placeholder="DD/MM/YYYY")
     
@@ -52,8 +52,10 @@ try:
             
             
             food = st.radio("Food preference :", ["Veg", "Non-veg"],horizontal=True)
-    
-            st.write(f"selected : :green[{food}]")
+            if food=="Veg":
+                st.write("selected : :green[Veg]")
+            else:
+                st.write("selected : :red[Non-veg]")
     
             suggestion = st.radio("Do you have any suggestions for the event :", ["Yes", "No"], index=1, horizontal=True)
             if suggestion == "Yes":
