@@ -77,7 +77,7 @@ try:
                     container = st.container(border=True)
                     container.write("This information will be stored in a database that can be accessed whenever necessary. It will be fully encrypted from end to end, ensuring that only authorized personnel and the admin can access it, keeping it secure from unauthorized users.")
     
-                 submit = st.button("Submit",type='primary')
+                 submit = st.columns(3)[1].button("Submit",type='primary')
                  if submit:
                      with st.spinner(text="Loading......"):
                          bar = st.progress(0)
