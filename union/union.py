@@ -78,7 +78,7 @@ try:
                  submit = st.columns(4)[2].button("Submit",type='primary')
                  if submit:
                      with st.spinner(text="Loading......"):
-                         bar = st.progress(50)
+                         bar = st.progress(0)
                          time.sleep(3)
                          bar.progress(100)
                          time.sleep(2)
