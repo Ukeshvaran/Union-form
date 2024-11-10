@@ -2,6 +2,8 @@ import streamlit as st
 import psycopg2 as pg
 import urllib.parse as urlparse
 import time
+import requests
+from streamlit_lottie import st_lottie
 
 st.markdown(
     """
@@ -68,7 +70,6 @@ try:
                       conn=st.container(border=True)
                       conn.write("if your going to perform any group activity. Kindly coordinate with your team and update here, what your going to perform along with your team-mates name")
                  performance=st.text_input("Please enter what you are going to perform :",placeholder="Enter your input in a single line")
-            st.divider()
             def load(url):
                 r=requests.get(url)
                 if r.status_code!=200:
@@ -77,7 +78,7 @@ try:
             url='https://lottie.host/a85a29f2-4a4b-46eb-a32a-a5bbdf9ffcd7/AJGlbMi1go.json'
             data=load(url)
             st_lottie(data,key="Click",loop=True,width=670,height=400)
-           st.divider()
+        
     
             check_box=st.checkbox("click & submit")
             if check_box:
