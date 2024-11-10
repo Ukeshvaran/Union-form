@@ -76,7 +76,7 @@ def info():
                  st.success("Thanks for your response!", icon=":material/thumb_up:")
                  sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
                  st.balloons()
-        st.markdown(":copyright: :blue[Jack's] Personal deployment")
+        st.markdown(":copyright: :blue[yukesh] Personal deployment")
 
 def sqlupdate(a, b, c, d , e,f,g,h,i):
     cur = con.cursor()
