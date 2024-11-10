@@ -30,7 +30,7 @@ try:
         password=url.password)
 
 except Exception as e:
-    st.error(f"Error connecting to PostgreSQL: {e}")
+    st.error(f"Error connecting to Database: {e}")
 st.columns(3)[1].title("Welcome")
 def info():
         name = st.text_input("Name :",placeholder="Enter your name")
