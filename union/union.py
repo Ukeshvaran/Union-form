@@ -1,6 +1,7 @@
 import streamlit as st
 import psycopg2 as pg
 import urllib.parse as urlparse
+import time
 
 st.markdown(
     """
@@ -76,8 +77,10 @@ try:
     
                  submit = st.columns(4)[2].button("Submit",type='primary')
                  if submit:
-                     st.success("Thanks for your response!", icon=":material/thumb_up:")
-                     st.error("You can now close your browser")
+                     with st.spinner(text="Loading......"):
+                         time.sleep(2)
+                         st.success("Thanks for your response!", icon=":material/thumb_up:")
+                         st.error("You can now close your browser")
                      
                      sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
                      st.balloons()
