@@ -79,25 +79,24 @@ def info():
                  st.balloons()
         st.markdown(":copyright: Jack's Personal deployment")
 
-try:
-    def sqlupdate(a, b, c, d , e,f,g,h,i):
-        cur = con.cursor()
-        cur.execute("""CREATE TABLE IF NOT EXISTS "unitable" (
-                            name VARCHAR(60),
-                            phone VARCHAR(15),
-                            Theme VARCHAR(500),
-                            event_availability(10),
-                            availability VARCHAR(500),
-                            place VARCHAR(500),
-                            food VARCHAR(30),
-                            suggestion VARCHAR(500),
-                            Performance VARCHAR(500)
-                        )""")
-        cur.execute("""INSERT INTO "unitable" (name, phone , theme,event_availability,availability,place ,food, suggestion,performance)
-                        VALUES (%s, %s, %s, %s, %s,%s,%s,%s,%s)""", (a, b, c, d, e,f,g,h,i))
-        con.commit()
-except:
-    st.warning("An error occurred")
+def sqlupdate(a, b, c, d , e,f,g,h,i):
+    cur = con.cursor()
+    cur.execute("""CREATE TABLE IF NOT EXISTS "unitable" (
+                        name VARCHAR(60),
+                        phone VARCHAR(15),
+                        Theme VARCHAR(500),
+                        event_availability(10),
+                        availability VARCHAR(500),
+                        place VARCHAR(500),
+                        food VARCHAR(30),
+                        suggestion VARCHAR(500),
+                        Performance VARCHAR(500)
+                    )""")
+    cur.execute("""INSERT INTO "unitable" (name, phone , theme,event_availability,availability,place ,food, suggestion,performance)
+                    VALUES (%s, %s, %s, %s, %s,%s,%s,%s,%s)""", (a, b, c, d, e,f,g,h,i))
+    con.commit()
+
+    
 
 info()
 
