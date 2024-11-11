@@ -91,8 +91,8 @@ try:
                   for i in game:
                         if int(guess)==i:
                               return (game[i])
-                  if btnn:
-            st.write(result(game,guess))
+            if btnn:
+                  st.write(result(game,guess))
             if performance=="Yes":
                  with st.chat_message('user'):
                       conn=st.container(border=True)
