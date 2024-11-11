@@ -62,7 +62,7 @@ try:
     
             suggestion = st.radio(" **Do you have any suggestion for the event** :", ["Yes", "No"], index=1, horizontal=True)
             if suggestion == "Yes":
-                suggestion = st.text_area("Suggestions :")
+                suggestion = st.text_area("Suggestions :",placeholder="Enter your suggestion here")
     
             performance=st.radio(" **Are you willing to perform any art at the event** :",["Yes","No"],index=1,horizontal=True)
             if performance=="Yes":
