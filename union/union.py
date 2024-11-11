@@ -37,7 +37,7 @@ try:
     st.columns(3)[1].image("https://occ-0-1723-1722.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABePV7eWrtLkRVZOiqV4jEB8vJQK-lZ5yBySb3DaltJRXRqeOkZQ279u4XEz4B4RL_dJFVvQmQJyhyH0Osd9jzJXIIK0nSaHuduLCMjJP9EH0.png?r=797",width=250)
     st.divider()
     def info():
-            name = st.text_input("Name :",placeholder="Enter your name")
+            name = st.text_input(" **Name** :",placeholder="Enter your name")
     
             phone=st.text_input("Phone number :",placeholder="Enter your contact number")
     
