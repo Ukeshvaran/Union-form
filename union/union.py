@@ -87,10 +87,12 @@ try:
             st.write("")
             guess=st.text_input("Enter any number between 1 - 10 : ",placeholder="Enter your number here")
             btnn=st.button("Enter",type='primary')
-            if btnn:
+            def result(game,guess):
                   for i in game:
-                      if guess==i:
-                          st.write(game[i])
+                        if int(guess)==i:
+                              return (game[i])
+                  if btnn:
+            st.write(result(game,guess))
             if performance=="Yes":
                  with st.chat_message('user'):
                       conn=st.container(border=True)
