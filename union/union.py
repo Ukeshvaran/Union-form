@@ -93,6 +93,7 @@ try:
             vid="https://youtu.be/s2TyVQGoCYo?si=Qj52Pn22hMhsd818"
             st.video(vid,loop=True,autoplay=True,muted=True)
             st.markdown(":red[Quote of the day] : :green[Don't forget to smile today :smile:]")
+            st.write("Feedback :")
             st.feedback(options="faces")
     
     def sqlupdate(a, b, c, d , e,f,g,h,i):
