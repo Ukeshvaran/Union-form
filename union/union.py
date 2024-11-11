@@ -56,9 +56,9 @@ try:
             
             food = st.radio(" **Food preference** :", ["Veg", "Non-veg"],horizontal=True)
             if food=="Veg":
-                st.write("selected : :green[Veg]")
+                st.write("selected : :green[veg]")
             else:
-                st.write("selected : :red[Non-veg]")
+                st.write("selected : :red[non-veg]")
     
             suggestion = st.radio(" **Do you have any suggestion for the event** :", ["Yes", "No"], index=1, horizontal=True)
             if suggestion == "Yes":
