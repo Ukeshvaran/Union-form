@@ -73,6 +73,8 @@ try:
             st.divider()
             check_box=st.checkbox(":blue[Click here] ")
             st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
+            st.write("")
+            st.write("")
             
             if check_box:
                  with st.chat_message('ai'):
