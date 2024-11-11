@@ -117,6 +117,14 @@ try:
                          st.write("")
                          st.error("You can now close your browser")
                          st.write("")
+                         try:
+                               cur.execute('''select (count (distinct("name"))) from "unitable" ''')
+                               a=cur.fetchall()
+                               con.commit()
+                               num=a[0][0]
+                               st.write(f"Total number of responses so far: {num+1}")
+                         except:
+                               st.warning("An ERROR occured")
                          
                          
                         
