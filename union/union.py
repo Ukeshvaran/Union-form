@@ -72,6 +72,7 @@ try:
                  performance=st.text_input(" **Please enter what you are going to perform** :",placeholder="Enter your input in a single line")
             st.divider()
             check_box=st.checkbox(":blue[Click here] ")
+            st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
             
             if check_box:
                  with st.chat_message('ai'):
@@ -95,7 +96,6 @@ try:
             
             vid="https://youtu.be/c5_dMj0J08Y?si=Ijhuxj4xyQdwSZ9G"
             st.video(vid,loop=True,autoplay=True,muted=True,subtitles=None)
-            st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
             st.markdown(" **Feedback** :")
             st.feedback(options="faces")
 
