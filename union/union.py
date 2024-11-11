@@ -89,13 +89,14 @@ try:
                      
                      sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
                      st.balloons()
+            st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
             
             vid="https://youtu.be/c5_dMj0J08Y?si=Ijhuxj4xyQdwSZ9G"
             st.video(vid,loop=True,autoplay=True,muted=True,subtitles=None)
-            st.markdown(":red[Quote of the day] : :green[ **Don't forget to smile today** :smile:]")
+            st.markdown(":black[Quote of the day] : :green[ **Don't forget to smile today** :smile:]")
             st.markdown(" **Feedback** :")
             st.feedback(options="faces")
-            st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
+
     
     def sqlupdate(a, b, c, d , e,f,g,h,i):
         cur = con.cursor()
