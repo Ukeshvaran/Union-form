@@ -3,6 +3,17 @@ import psycopg2 as pg
 import urllib.parse as urlparse
 import time
 
+game={1:"The best way to predict your future is to create it",
+      2:"Every day may not be good, but there’s something good in every day",
+      3:"Believe in yourself, and you’ll be unstoppable",
+      4:"You are never too old to set another goal or to dream a new dream",
+      5:"Your attitude determines your direction",
+      6:"Success is not the key to happiness. Happiness is the key to success",
+      7:"Don't wait for the perfect moment. Take the moment and make it perfect",
+      8:"You are capable of amazing things",
+      9:"The only limit to our realization of tomorrow is our doubts of today",
+      10:"Be a voice, not an echo"}
+
 st.markdown(
     """
     <style>
@@ -74,6 +85,10 @@ try:
     
             performance=st.radio(" **Are you willing to perform any art at the event** :",["Yes","No"],index=1,horizontal=True)
             st.write("")
+            guess=st.text_input("Enter any number between 1 - 10",placeholder="Enter your number here")
+            for i in game:
+                if guess==i:
+                    st.write(game[i])
             if performance=="Yes":
                  with st.chat_message('user'):
                       conn=st.container(border=True)
