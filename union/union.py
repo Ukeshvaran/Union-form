@@ -93,7 +93,7 @@ try:
             
             vid="https://youtu.be/c5_dMj0J08Y?si=Ijhuxj4xyQdwSZ9G"
             st.video(vid,loop=True,autoplay=True,muted=True,subtitles=None)
-            st.markdown(" Quote of the day : :green[ **Don't forget to smile today** :smile:]")
+            st.markdown(" Quote of the day : :yellow[ **Don't forget to smile today** :smile:]")
             st.markdown(" **Feedback** :")
             st.feedback(options="faces")
 
