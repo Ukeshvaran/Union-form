@@ -41,7 +41,7 @@ try:
     
             phone=st.text_input(" **Phone number** :",placeholder="Enter your contact number")
     
-            theme=st.text_input(" **Do you have any specific theme suggestion for the event** :")
+            theme=st.text_input(" **Do you have any specific theme suggestion for the event** :",placeholder="Enter your text here")
     
             event_avail= st.radio(" **Please confirm whether you will be available to join the event** :",["Yes","No","Not sure"],horizontal=True)
     
