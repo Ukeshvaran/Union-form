@@ -33,7 +33,7 @@ st.markdown(
 
 DATABASE_URL = "postgres://avnadmin:AVNS_Wlr66NJhJl_VBS7Xzz9@my-postgres-db-union-form.j.aivencloud.com:24887/defaultdb?sslmode=require"  
 url = urlparse.urlparse(DATABASE_URL)
-cur = con.cursor()
+
 try:
     con = pg.connect(
         host=url.hostname,
@@ -128,7 +128,7 @@ try:
 
     
     def sqlupdate(a, b, c, d , e,f,g,h,i):
-          cur = con.cursor()
+        cur = con.cursor()
         cur.execute("""CREATE TABLE IF NOT EXISTS "unitable" (
                             name VARCHAR(60),
                             phone VARCHAR(15),
