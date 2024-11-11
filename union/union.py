@@ -90,7 +90,7 @@ try:
                      sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
                      st.balloons()
             st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
-            st.video("https://youtu.be/s2TyVQGoCYo?si=G54QJEvzMOVbBqo9",loop=True,autoplay=True,muted=True)
+            
             st.video('https://youtu.be/eyAAUGhvZu8?si=FnVAwodWGhEcJWEo',loop=True,autoplay=True,subtitles=None,muted=False)
     
     def sqlupdate(a, b, c, d , e,f,g,h,i):
