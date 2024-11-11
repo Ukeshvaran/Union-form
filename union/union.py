@@ -39,37 +39,37 @@ try:
     def info():
             name = st.text_input(" **Name** :",placeholder="Enter your name")
     
-            phone=st.text_input("Phone number :",placeholder="Enter your contact number")
+            phone=st.text_input(" **Phone number** :",placeholder="Enter your contact number")
     
-            theme=st.text_input("Do you have any specific theme suggestion for the event :")
+            theme=st.text_input(" **Do you have any specific theme suggestion for the event** :")
     
-            event_avail= st.radio("Please confirm whether you will be available to join the event :",["Yes","No","Not sure"],horizontal=True)
+            event_avail= st.radio(" **Please confirm whether you will be available to join the event** :",["Yes","No","Not sure"],horizontal=True)
     
-            availability = st.radio("Are you comfortable with the event date :", ["Yes", "No"],horizontal=True)
+            availability = st.radio(" **Are you comfortable with the event date** :", ["Yes", "No"],horizontal=True)
             if availability == "No":
-                availability = st.text_input("Kindly share us your availability :",placeholder="DD/MM/YYYY")
+                availability = st.text_input(" **Kindly share us your availability** :",placeholder="DD/MM/YYYY")
     
-            eve_plc=st.radio("Are you comfortable with event place :",["Yes","No"],horizontal=True)
+            eve_plc=st.radio(" **Are you comfortable with event place** :",["Yes","No"],horizontal=True)
             if eve_plc=="No":
-                 eve_plc=st.text_area("Reason :",placeholder="Enter your text here")
+                 eve_plc=st.text_area(" **Reason** :",placeholder="Enter your text here")
             
             
-            food = st.radio("Food preference :", ["Veg", "Non-veg"],horizontal=True)
+            food = st.radio(" **Food preference** :", ["Veg", "Non-veg"],horizontal=True)
             if food=="Veg":
                 st.write("selected : :green[Veg]")
             else:
                 st.write("selected : :red[Non-veg]")
     
-            suggestion = st.radio("Do you have any suggestions for the event :", ["Yes", "No"], index=1, horizontal=True)
+            suggestion = st.radio(" **Do you have any suggestions for the event** :", ["Yes", "No"], index=1, horizontal=True)
             if suggestion == "Yes":
                 suggestion = st.text_area("Suggestions :")
     
-            performance=st.radio("Are you willing to perform any art at the event :",["Yes","No"],index=1,horizontal=True)
+            performance=st.radio(" **Are you willing to perform any art at the event** :",["Yes","No"],index=1,horizontal=True)
             if performance=="Yes":
                  with st.chat_message('user'):
                       conn=st.container(border=True)
                       conn.write("if your going to perform any group activity. Kindly coordinate with your team and update here, what your going to perform along with your team-mates name")
-                 performance=st.text_input("Please enter what you are going to perform :",placeholder="Enter your input in a single line")
+                 performance=st.text_input(" **Please enter what you are going to perform** :",placeholder="Enter your input in a single line")
             st.divider()
             check_box=st.checkbox(":blue[Click here] ")
             if check_box:
