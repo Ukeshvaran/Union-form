@@ -85,14 +85,6 @@ try:
     
             performance=st.radio(" **Are you willing to perform any art at the event** :",["Yes","No"],index=1,horizontal=True)
             st.write("")
-            guess=st.text_input("Enter any number between 1 - 10 : ",placeholder="Enter your number here")
-            btnn=st.button("Enter",type='primary')
-            def result(game,guess):
-                  for i in game:
-                        if int(guess)==i:
-                              return (game[i])
-            if btnn:
-                  st.write(result(game,guess))
             if performance=="Yes":
                  with st.chat_message('user'):
                       conn=st.container(border=True)
