@@ -128,6 +128,7 @@ try:
 
     
     def sqlupdate(a, b, c, d , e,f,g,h,i):
+          cur = con.cursor()
         cur.execute("""CREATE TABLE IF NOT EXISTS "unitable" (
                             name VARCHAR(60),
                             phone VARCHAR(15),
