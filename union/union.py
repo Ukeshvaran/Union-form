@@ -116,7 +116,7 @@ try:
                          st.success("Thanks for your response!", icon=":material/thumb_up:")
                          st.error("You can now close your browser")
                          st.write("")
-                         cur.excute('''select (count (distinct("name"))) from "unitable" ''')
+                         cur.execute('''select (count (distinct("name"))) from "unitable" ''')
                          a=cur.fetchall()
                          con.commit()
                          num=a[0][0]
