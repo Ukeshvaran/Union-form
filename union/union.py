@@ -91,7 +91,7 @@ try:
                      st.balloons()
             st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
             vid="https://youtu.be/s2TyVQGoCYo?si=Qj52Pn22hMhsd818"
-            st.video(vid,loop=True,autoplay=True,muted=False)
+            st.video(vid,loop=True,autoplay=True,muted=True)
     
     def sqlupdate(a, b, c, d , e,f,g,h,i):
         cur = con.cursor()
