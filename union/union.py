@@ -114,17 +114,19 @@ try:
                          bar.progress(100)
                          time.sleep(2)
                          st.success("Thanks for your response!", icon=":material/thumb_up:")
+                         st.write("")
                          st.error("You can now close your browser")
                          st.write("")
                          cur.execute('''select (count (distinct("name"))) from "unitable" ''')
                          a=cur.fetchall()
                          con.commit()
                          num=a[0][0]
-                         st.write(f"Total number of responses : {num+1}")
+                         st.write(f"Total number of responses so far: {num+1}")
                         
                      
                      sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
                      st.balloons()
+            st.write("")
             
             
             vid="https://youtu.be/c5_dMj0J08Y?si=Ijhuxj4xyQdwSZ9G"
