@@ -72,7 +72,7 @@ try:
                  performance=st.text_input(" **Please enter what you are going to perform** :",placeholder="Enter your input in a single line")
             st.divider()
             check_box=st.checkbox(":blue[Click here] ")
-            st.divider()
+            
             if check_box:
                  with st.chat_message('ai'):
                     container = st.container(border=True)
