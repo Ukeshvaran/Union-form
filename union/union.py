@@ -123,8 +123,8 @@ try:
                                con.commit()
                                num=a[0][0]
                                st.write(f"Total number of responses so far: {num+1}")
-                        except:
-                              st.warning("An ERROR occured")
+                         except:
+                               st.warning("An ERROR occured")
                         
                      
                      sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
