@@ -71,13 +71,14 @@ try:
                       conn.write("if your going to perform any group activity. Kindly coordinate with your team and update here, what your going to perform along with your team-mates name")
                  performance=st.text_input(" **Please enter what you are going to perform** :",placeholder="Enter your input in a single line")
             check_box=st.checkbox(":blue[Click here] ")
+            st.divider()
             if check_box:
                  with st.chat_message('ai'):
                     container = st.container(border=True)
                     container.write("This information will be stored in a database that can be accessed whenever necessary. It will be fully encrypted from end to end, ensuring that only authorized personnel and the admin can access it, keeping it secure from unauthorized users.")
     
                  submit = st.columns(3)[1].button("Submit",type='primary')
-             st.divider()
+             
                  if submit:
                      with st.spinner(text="Loading......"):
                          bar = st.progress(0)
