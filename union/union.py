@@ -120,7 +120,7 @@ try:
                          a=cur.fetchall()
                          con.commit()
                          num=a[0][0]
-                         st.write(f"Total number of responses : {num}")
+                         st.write(f"Total number of responses : {num+1}")
                         
                      
                      sqlupdate(name, phone ,theme,event_avail,availability,eve_plc, food, suggestion,performance)
