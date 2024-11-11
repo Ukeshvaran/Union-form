@@ -60,7 +60,7 @@ try:
             else:
                 st.write("selected : :red[Non-veg]")
     
-            suggestion = st.radio(" **Do you have any suggestions for the event** :", ["Yes", "No"], index=1, horizontal=True)
+            suggestion = st.radio(" **Do you have any suggestion for the event** :", ["Yes", "No"], index=1, horizontal=True)
             if suggestion == "Yes":
                 suggestion = st.text_area("Suggestions :")
     
