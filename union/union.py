@@ -38,33 +38,42 @@ try:
     st.divider()
     def info():
             name = st.text_input(" **Name** :",placeholder="Enter your name")
+            st.write("")
     
             phone=st.text_input(" **Phone number** :",placeholder="Enter your contact number")
+            st.write("")
     
             theme=st.text_input(" **Do you have any specific theme suggestion for the event** :",placeholder="Enter your text here")
+            st.write("")
     
             event_avail= st.radio(" **Please confirm whether you will be available to join the event** :",["Yes","No","Not sure"],horizontal=True)
+            st.write("")
     
             availability = st.radio(" **Are you comfortable with the event date** :", ["Yes", "No"],horizontal=True)
+            st.write("")
             if availability == "No":
                 availability = st.text_input(" **Kindly share us your availability** :",placeholder="DD/MM/YYYY")
     
             eve_plc=st.radio(" **Are you comfortable with event place** :",["Yes","No"],horizontal=True)
+            st.write("")
             if eve_plc=="No":
                  eve_plc=st.text_area(" **Reason** :",placeholder="Enter your text here")
             
             
             food = st.radio(" **Food preference** :", ["Veg", "Non-veg"],horizontal=True)
+            st.write("")
             if food=="Veg":
                 st.write("selected : :green[veg]")
             else:
                 st.write("selected : :red[non-veg]")
     
             suggestion = st.radio(" **Do you have any suggestion for the event** :", ["Yes", "No"], index=1, horizontal=True)
+            st.write("")
             if suggestion == "Yes":
                 suggestion = st.text_area("Suggestions :",placeholder="Enter your suggestion here")
     
             performance=st.radio(" **Are you willing to perform any art at the event** :",["Yes","No"],index=1,horizontal=True)
+            st.write("")
             if performance=="Yes":
                  with st.chat_message('user'):
                       conn=st.container(border=True)
@@ -76,8 +85,7 @@ try:
             st.write("")
             st.write("")
             st.write("")
-            st.write("")
-            st.write("")
+            
             
             if check_box:
                  with st.chat_message('ai'):
