@@ -105,9 +105,8 @@ try:
                  with st.chat_message('ai'):
                     container = st.container(border=True)
                     container.write("This information will be stored in a cloud database that can be accessed whenever necessary. It will be fully encrypted from end to end, ensuring that only authorized personnel and the admin can access it, keeping it secure from unauthorized users.")
-            st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
             
-                  submit = st.button("Submit",type='primary')
+                 submit = st.button("Submit",type='primary')
              
                  if submit:
                      with st.spinner(text="Loading......"):
@@ -138,6 +137,11 @@ try:
             
             vid="https://youtu.be/c5_dMj0J08Y?si=Ijhuxj4xyQdwSZ9G"
             st.video(vid,loop=True,autoplay=True,muted=True,subtitles=None)
+            st.write("")
+            st.write("")
+            st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
+            st.write("")
+            st.write("")
             st.markdown(" **Feedback** :")
             st.feedback(options="faces")
 
