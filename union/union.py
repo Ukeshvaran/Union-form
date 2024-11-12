@@ -4,6 +4,8 @@ import urllib.parse as urlparse
 import time
 from google.cloud import translate_v2 as translate
 
+translate_client = translate.Client()
+
 game={1:"The best way to predict your future is to create it",
       2:"Every day may not be good, but there’s something good in every day",
       3:"Believe in yourself, and you’ll be unstoppable",
