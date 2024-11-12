@@ -95,12 +95,17 @@ try:
             st.divider()
 
             
-      
-            check_box=st.checkbox(":blue[Click here] ")
-            st.write("")
+            col1,col2=st.columns(2)
+            with col1:
+                  check_box=st.checkbox(":blue[Click here] ")
+                  st.write("")
+            with col2:
+                  a={'Tamil':'ta','English':'en','Malayalam':'ml','Kannada':'kn','Telugu':'te'}
+                  
+                  tgl=st.selectbox("Enter",['Tamil','English','Malayalam','Kannada','Telugu'])
             
             
-            if check_box:
+            if check_box and tgl:
                  with st.chat_message('ai'):
                     container = st.container(border=True)
                     container.write("This information will be stored in a cloud database that can be accessed whenever necessary. It will be fully encrypted from end to end, ensuring that only authorized personnel and the admin can access it, keeping it secure from unauthorized users.")
