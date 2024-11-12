@@ -107,6 +107,8 @@ try:
                        container.write(text)
                        
                  st.write("")
+                 st.write("")
+                 st.write("")
                  submit = st.button("Submit",type='primary')
                  st.write("")
                  st.write("")
