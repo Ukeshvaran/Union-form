@@ -103,7 +103,7 @@ try:
             if check_box:
                  with st.chat_message('ai'):
                     container = st.container(border=True)
-                    container.write("This information will be stored in a database that can be accessed whenever necessary. It will be fully encrypted from end to end, ensuring that only authorized personnel and the admin can access it, keeping it secure from unauthorized users.")
+                    container.write("This information will be stored in a cloud database that can be accessed whenever necessary. It will be fully encrypted from end to end, ensuring that only authorized personnel and the admin can access it, keeping it secure from unauthorized users.")
     
                  submit = st.columns(3)[1].button("Submit",type='primary')
              
