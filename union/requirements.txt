@@ -1,6 +1,6 @@
 streamlit
 psycopg2-binary
-googletrans
+google.cloud
 
 
 
