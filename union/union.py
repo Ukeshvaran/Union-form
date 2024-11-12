@@ -93,19 +93,22 @@ try:
                       conn.write("if your going to perform any group activity. Kindly coordinate with your team and update here, what your going to perform along with your team-mates name")
                  performance=st.text_input(" **Please enter what you are going to perform** :",placeholder="Enter your input in a single line")
             st.divider()
-            check_box=st.checkbox(":blue[Click here] ")
-            st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
-            st.write("")
-            st.write("")
-            st.write("")
-            
+
+            col1,col2,col3=st.columns(3)
+            with col1:
+                  check_box=st.checkbox(":blue[Click here] ")
+                  st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
+                  st.write("")
+                  st.write("")
+                  st.write("")
             
             if check_box:
                  with st.chat_message('ai'):
                     container = st.container(border=True)
                     container.write("This information will be stored in a cloud database that can be accessed whenever necessary. It will be fully encrypted from end to end, ensuring that only authorized personnel and the admin can access it, keeping it secure from unauthorized users.")
-    
-                 submit = st.columns(3)[1].button("Submit",type='primary')
+            
+                 with col3:
+                       submit = st.columns(3)[1].button("Submit",type='primary')
              
                  if submit:
                      with st.spinner(text="Loading......"):
