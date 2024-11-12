@@ -2,7 +2,7 @@ import streamlit as st
 import psycopg2 as pg
 import urllib.parse as urlparse
 import time
-from googletrans import Translator
+from google.cloud import translate_v2 as translate
 
 game={1:"The best way to predict your future is to create it",
       2:"Every day may not be good, but there’s something good in every day",
@@ -111,7 +111,7 @@ try:
                  with st.chat_message('ai'):
                     for i in a:
                           if i==tgl:
-                                translated=Translator().translate(msg,src='en',dest=a[i])
+                                translated=translate_client.translate(msg,src='en',dest=a[i])
                     container = st.container(border=True)
                     container.write(translated.text)
                        
