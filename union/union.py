@@ -109,11 +109,13 @@ try:
                  st.write("")
                  st.write("")
                  st.write("")
-                 submit = st.button("Submit",type='primary')
                  st.write("")
-                 st.write("")
-                 st.write("")
-                 st.write("")
+                 with col2:
+                       submit = st.button("Submit",type='primary')
+                       st.write("")
+                       st.write("")
+                       st.write("")
+                       st.write("")
              
                  if submit:
                      with st.spinner(text="Loading......"):
