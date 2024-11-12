@@ -2,6 +2,7 @@ import streamlit as st
 import psycopg2 as pg
 import urllib.parse as urlparse
 import time
+from googletrans import Translator
 
 game={1:"The best way to predict your future is to create it",
       2:"Every day may not be good, but there’s something good in every day",
@@ -101,14 +102,18 @@ try:
                   st.write("")
             with col2:
                   a={'Tamil':'ta','English':'en','Malayalam':'ml','Kannada':'kn','Telugu':'te'}
+                  msg="This information will be stored in a cloud database that can be accessed whenever necessary. It will be fully encrypted from end to end, ensuring that only authorized personnel and the admin can access it, keeping it secure from unauthorized users."
                   
                   tgl=st.selectbox("Enter",['Tamil','English','Malayalam','Kannada','Telugu'])
             
             
             if check_box and tgl:
                  with st.chat_message('ai'):
+                    for i in a:
+                          if i==tgl:
+                                translated=Translator().translate(msg,src='en',dest=a[i])
                     container = st.container(border=True)
-                    container.write("This information will be stored in a cloud database that can be accessed whenever necessary. It will be fully encrypted from end to end, ensuring that only authorized personnel and the admin can access it, keeping it secure from unauthorized users.")
+                    container.write(translated.text)
                        
                  st.write("")
                  submit = st.button("Submit",type='primary')
