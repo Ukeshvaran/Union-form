@@ -109,6 +109,8 @@ try:
                  submit = st.button("Submit",type='primary')
                  st.write("")
                  st.write("")
+                 st.write("")
+                 st.write("")
              
                  if submit:
                      with st.spinner(text="Loading......"):
@@ -139,7 +141,6 @@ try:
             
             vid="https://youtu.be/c5_dMj0J08Y?si=Ijhuxj4xyQdwSZ9G"
             st.video(vid,loop=True,autoplay=True,muted=True,subtitles=None)
-            st.write("")
             st.markdown(":copyright: :red[yukesh's]  personal  web  deployment")
             st.write("")
             st.write("")
