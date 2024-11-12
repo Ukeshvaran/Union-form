@@ -111,7 +111,7 @@ try:
                  st.write("")
                  st.write("")
                  
-                 submit = st.button("Submit",type='primary')
+                 submit = st.columns(3)[1].button("Submit",type='primary')
                  st.write("")
                  st.write("")
                  st.write("")
