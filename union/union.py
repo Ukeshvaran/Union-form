@@ -98,14 +98,14 @@ try:
       
             check_box=st.checkbox(":blue[Click here] ")
             st.write("")
-            st.write("")
-            st.write("")
+            
             
             if check_box:
                  with st.chat_message('ai'):
                     container = st.container(border=True)
                     container.write("This information will be stored in a cloud database that can be accessed whenever necessary. It will be fully encrypted from end to end, ensuring that only authorized personnel and the admin can access it, keeping it secure from unauthorized users.")
-            
+                       
+                 st.write("")
                  submit = st.button("Submit",type='primary')
                  st.write("")
                  st.write("")
