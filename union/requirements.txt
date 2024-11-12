@@ -2,5 +2,5 @@ streamlit
 psycopg2-binary
 google.cloud
 
-
+translate_v2
 
